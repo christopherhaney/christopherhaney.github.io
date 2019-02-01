@@ -2,11 +2,11 @@ Here are the projects I'm currently working on!
 
 # Java
 
-[BPM Analyzer](https://github.com/christopherhaney/java-bpm): Analyze the tempo (beats per minute) of a .wav file
+To be announced!
 
 # C
 
-[smash](https://github.com/christopherhaney/smash): A command line designed to emulate BASH and use BASH programs
+[smash](https://github.com/christopherhaney/smash): A command line designed to emulate BASH and use BASH programs.
 
 # Python
 
