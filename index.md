@@ -2,7 +2,7 @@ Here are the projects I'm currently working on!
 
 # Java
 
-To be announced!
+Ace10: My primary project. A game of blackjack written in Java that will start as a command line game, then a website with a variety of settings and user stat tracking, then an Android app.
 
 # C
 
