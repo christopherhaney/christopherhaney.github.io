@@ -14,7 +14,7 @@ Here are the projects I'm currently working on!
 
 # Blogs
 
-[NVIDIA DLSS](posts/dlss.md)
+[NVIDIA DLSS](posts/dlss)
 
 
 **"You're a software engineer. Your job is to build custom solutions to problems that have already been solved." - Jarvis Johnson**
