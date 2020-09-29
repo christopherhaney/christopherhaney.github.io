@@ -15,5 +15,6 @@ Here are the projects I'm currently working on!
 # Blogs
 
 [NVIDIA DLSS](posts/dlss)
+[GeoCorona Senior Project](posts/geocorona)
 
 **"You're a software engineer. Your job is to build custom solutions to problems that have already been solved." - Jarvis Johnson**
