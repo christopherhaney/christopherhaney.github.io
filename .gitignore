@@ -1,2 +1,5 @@
 # File Extensions
 .DS_Store
+
+# Directories
+_site/

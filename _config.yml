@@ -1,2 +1,13 @@
 theme: jekyll-theme-midnight
 title: Welcome to Chris Haney's GitHub!
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+    noscript: false
+kramdown:
+    math_engine: mathjax
+    syntax_highlighter: rouge
+exclude:
+    - Gemfile
