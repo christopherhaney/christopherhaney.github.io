@@ -16,7 +16,7 @@ Video games have always struggled in the compromise between **graphics** and **p
 
 ### Prioritizing Graphics 
 
-![Connor's Ultra Realistic Textures](/assets/dlss/connor.jpg)
+![Connor in Detroit Become Human](/assets/dlss/detroit_become_human_connor.jpg)
 
 <center><em>Connor from Detroit: Become Human (2018). Note the realistic textures of his suit and tie.</em></center>
 <br>
@@ -52,15 +52,13 @@ Conversely, you can make a game perform excellently by decreasing the complexity
 <center><em>DUSK (2018) rendering at 60 FPS. Note the simple repeating rock and lava textures.</em></center>
 <br>
 
-DUSK is a great modern example of this, choosing a retro aesthetic reminiscent of the earliest 3D first-person shooter games, [DOOM](https://en.wikipedia.org/wiki/Doom_(1993_video_game)) in particular. This decrease in visual quality simultaneously allows the game to achieve near-flawless performance on lower-end GPUs for fantastically fast and smooth gameplay.
+DUSK is a great modern example of this, choosing a retro aesthetic reminiscent of the earliest 3D first-person shooter games, [DOOM](https://en.wikipedia.org/wiki/Doom_(1993_video_game)) in particular. This decrease in visual quality simultaneously allows the game to achieve near-flawless performance on lower-end GPUs for consistently fast and smooth gameplay.
 
 <p align="center">
   <img src="/assets/dlss/doom_eternal.gif" />
 </p>
 
-<center>
-  <em>Doom Eternal (2020) rendering at 60 FPS. Note the light eminating from the fire and the sword.</em>
-</center>
+<center><em>Doom Eternal (2020) rendering at 60 FPS. Note the light eminating from the fire and the sword.</em></center>
 <br>
 
 Doom Eternal, released 27 years after the original DOOM, obviously has a similar visual and gameplay style as DUSK. Unlike DUSK, it opts for hyperrealistic modern textures and lighting effects. The game can still achieve the performance of DUSK, but you'll need a GPU with some serious horsepower<sup><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080/" target="_blank">2</a></sup> to do it...
@@ -81,18 +79,18 @@ For decades graphics and performance have been a trade-off where many delicate c
 </center>
 <br>
 
-**NVIDIA DLSS**, short for **deep learning super sampling**, is a way to use **machine learning** (letting a computer teach itself to improve at a task with minimal input from humans) to decrease the looks vs. performance trade-off. Here's the complex step-by-step breakdown of how it works:
+**NVIDIA DLSS**, short for **deep learning super sampling**, is a way to use **machine learning** (letting a computer teach itself to improve at a task with minimal input from humans) to decrease the trade-off between looks and performance. Here's the complex step-by-step breakdown of how it works:
 
-1. Several ultra-high resolution 16K images for a game are uploaded to an NVIDIA DGX AI supercomputer. These images will later be used to compare and improve DLSS rendered images.
+1. Several ultra-high resolution 16K images for a game are uploaded to an NVIDIA DGX supercomputer<sup><a href="https://www.nvidia.com/en-us/data-center/dgx-systems/" target="_blank">5</a></sup>. These images will later be used to compare and improve DLSS rendered images.
 2. The DGX supercomputer renders the game at a resolution much lower than the desired final resolution.
-3. An AI network called a convolutional autoencoder "takes the low resolution current frame, and the high resolution previous frame, to determine on a pixel-by-pixel basis how to generate a higher quality current frame."<sup><a href="https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-2-0-a-big-leap-in-ai-rendering/" target="_blank">4</a></sup>
-4. **Motion vectors**, images that track the change between two frames, are simultaneously rendered. These further help DLSS render the next frame by helping it "guess" what the next frame is going to look like. For example, motion vectors could be used to recognize the direction the player is moving in-game. Then DLSS can use that information to help render the next frame by guessing where any visible objects are about to be.
+3. An AI network called a convolutional autoencoder "takes the low resolution current frame, and the high resolution previous frame, to determine on a pixel-by-pixel basis how to generate a higher quality current frame."<sup><a href="" target="_blank">4</a></sup>
+4. **Motion vectors**, images that show the change between two frames, are rendered simultaneously. Motion vectors assist DLSS with render ing frames by helping it "guess" what the next frame is going to look like. For example, motion vectors could be used to recognize the direction the player is moving in-game. Then DLSS can use that information to help render the next frame since it now "knows" where the visible objects are about to be.
 5. The DGX supercomputer then compares the DLSS rendered image to the original image and sees how close it got, logging any errors and inconsistencies to improve future renders.
-6. Steps 2 through 5 are repeated thousands of times until DLSS images are consistently close enough to the original image. At this point the **AI model** for the game is complete! An **AI model** is simply an algorithm that has been successfully trained to recognize patterns. In this case, the pattern involves what the game looks like (common color palettes and textures), various kinds of motion vectors that occur in normal gameplay and so much more!
-7. This AI model is then put into the RTX GPU **drivers**, software that tells hardware how to communicate with a computer. This means that when a user installs or updates to the latest drivers, their NVIDIA RTX GPUs can now use this model to render this game using DLSS!
-8. The user enables DLSS in their supported game of choice. The game will now display at a high resolution while the GPU is rendering the game at a lower resolution, offering *huge* performance gains!
+6. Steps 2 through 5 are repeated tens of thousands of times until DLSS images are consistently close enough to the original image. At this point the **AI model** for the game is complete! An **AI model** is simply an algorithm that has been successfully trained to recognize patterns. In this case, the pattern involves what the game looks like (common color palettes and textures), various kinds of motion vectors that occur in normal gameplay and so much more!
+7. This AI model is then put into the NVIDIA RTX GPU **drivers**, software that tells hardware how to communicate with the rest of the computer. This means that when a user installs or updates to the newest drivers, their NVIDIA RTX GPUs can now use this model to render this game using DLSS!
+8. The user enables DLSS in their supported game of choice. The game will now display at a high resolution while the GPU is rendering the game at a lower resolution, offering *huge* resolution *and* performance gains!
 
-In short, a supercomputer teaches itself to take low quality images of a game and make them much higher quality. What it learns is then put into the end user's GPUs, which allows any RTX NVIDIA GPU to render the game at a low resolution but display the game at a high resolution. Better graphics AND better performance have now been achieved simultaneously!
+In short, a supercomputer teaches itself how to take low resolution images of a game and make them a much higher resolution. What it learns is then put into the end user's GPUs, which allows any NVIDIA RTX GPU to render the game at a low resolution but display the game at a high resolution. Better resolution *and* better performance have now been achieved simultaneously!
 
 ### Pros of DLSS
 
@@ -104,23 +102,23 @@ In short, a supercomputer teaches itself to take low quality images of a game an
 </center>
 <br>
 
-The whole reason DLSS is so revolutionary is that it can offer substantial performance gains, especially for lower-end hardware. This kind of technology would be particularly exciting for consoles like the Xbox, PlayStation and Nintendo Switch. These consoles have to sacrifice a lot of performance and graphics capability to keep them cheap. 
+The whole reason DLSS is so revolutionary is that it can offer substantial resolution and performance gains, especially for lower-end hardware. This kind of technology would be particularly exciting for consoles like the Xbox, PlayStation and Nintendo Switch. These consoles have to sacrifice a lot of performance and graphics capability to keep them cheap, so anything that can boost performance to the extent DLSS can is an exciting prospect! 
 
 ### Cons of DLSS
 
-Although DLSS is exciting and potentially revolutionary, it is an experimental project that currently only works on a small subset of PC games and only for modern NVIDIA RTX GPUs, so no consoles or AMD GPUs are supported yet... or maybe ever.
+Although DLSS is exciting and potentially revolutionary, it is an experimental project that currently only works on a small subset of PC games and only for modern NVIDIA RTX GPUs. This means that no consoles or AMD GPUs support DLSS at the time of writing.
 
-The biggest issue of the current implementation of DLSS is that the upscaled images can have noticeable issues compared to simply rendering the image at native resolution.
+The biggest issue of the current implementation of DLSS is that DLSS rendered images can have noticeable problems compared to simply rendering the image at native resolution.
 
 ![Death Stranding Waterfall](/assets/dlss/death_stranding_waterfall.gif)
 
 <center>
-  <em>Death Stranding (2019) rendering at 4K resolution, note the details lost in waterfall caused by DLSS.<sup><a href="https://youtu.be/5I-1kivNAtc?t=205" target="_blank">5</a></sup>
+  <em>Death Stranding (2019) rendering at 4K resolution. Note the details lost in waterfall caused by DLSS.<sup><a href="https://youtu.be/5I-1kivNAtc?t=205" target="_blank">6</a></sup>
   </em>
 </center>
 <br>
 
-But DLSS is still *very close* to the natively rendered image, and it's running at *a minimum of 30 FPS higher*. That's why DLSS is so impressive to me. If we're already seeing solid upscaling and substantial performance gains in its experimental phase imagine what it will be more capable of as the machine learning algorithms improve!
+But DLSS is still *very close* to the natively rendered image, and it's running at *a minimum of 30 FPS higher*. That's why DLSS is so impressive to me. If we're already seeing substantial resolution and performance gains in its experimental phase imagine what it will be more capable of as the DLSS algorithms improve!
 
 ## Closing Remarks
 
@@ -136,4 +134,6 @@ DLSS is without a doubt the most exciting development in closing the gap between
 
 [4. NVIDIA DLSS 2.0: A Big Leap In AI Rendering by Andrew Burnes](https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-2-0-a-big-leap-in-ai-rendering/)
 
-[5. Death Stranding DLSS 2.0 Tested by Joker Productions](https://youtu.be/5I-1kivNAtc?t=205)
+[5. NVIDIA DGX Systems](https://www.nvidia.com/en-us/data-center/dgx-systems/)
+
+[6. Death Stranding DLSS 2.0 Tested by Joker Productions](https://youtu.be/5I-1kivNAtc?t=205)
