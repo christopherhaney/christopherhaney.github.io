@@ -1,5 +1,7 @@
 # File Extensions
 .DS_Store
+Gemfile
+Gemfile.lock
 
 # Directories
 _site/
