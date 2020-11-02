@@ -1,4 +1,4 @@
-<h1><center>NVIDIA DLSS</center></h1>
+<h1><center>NVIDIA DLSS: A (Video) Game Changer</center></h1>
 
 ## Graphics vs. Performance
 
@@ -12,7 +12,7 @@
 <center><em>A Lamborghini rendered in Forza Motorsport 7 (2017). No, that is not a real Lamborghini...</em></center>
 <br>
 
-Video games have always struggled in the compromise between **graphics** and **performance**. Let’s start by discussing the pros and cons of prioritizing graphics versus prioritizing performance and establish some terminology along the way.
+Video games have always struggled with the compromise between **graphics** and **performance**. Let’s start by discussing the pros and cons of prioritizing graphics versus prioritizing performance and establish some terminology along the way.
 
 ### Prioritizing Graphics 
 
@@ -21,7 +21,7 @@ Video games have always struggled in the compromise between **graphics** and **p
 <center><em>Connor from Detroit: Become Human (2018). Note the realistic textures of his suit and tie.</em></center>
 <br>
 
-The prettier a game looks, the more difficult it is for the **graphics processing unit** (or **GPU**) to render the game at a high **frame rate** and **resolution**. Frame rate, or **frames per second (FPS)**, is the number of images per second that the GPU can send to a **display**, such as a computer monitor or television. The more images per second, the smoother the experience for the player. **Resolution** is the number of distinct pixels on a display. The more pixels there are the clearer the display looks, but as a result images become more complicated to render. This means higher frame rates become much more difficult to achieve for the GPU.
+The prettier a game looks, the more difficult it is for the **graphics processing unit** (or **GPU**) to render the game at a high **frame rate** and **resolution**. Frame rate, or **frames per second (FPS)**, is the number of images per second that the GPU can send to a **display**, such as a computer monitor or television. The more images per second the smoother the player experiences the game. **Resolution** is the number of distinct pixels on a display. The more pixels there are the clearer the display appears, but as a result images become more complicated to render. This means higher frame rates become much more difficult for the GPU to render.
 
 If a game strictly prioritizes graphics the GPU might not be able to render the game quickly enough. This can make the display look more like a PowerPoint than a live, interactive experience. Observe below how choppy 15 FPS looks compared to 30 FPS and especially 60 FPS. Could you imagine playing a video game or watching a movie that looked like it was stuttering the whole time?
 
@@ -43,7 +43,7 @@ If a game strictly prioritizes graphics the GPU might not be able to render the 
 
 ### Prioritizing Performance
 
-Conversely, you can make a game perform excellently by decreasing the complexity of the images that need to be rendered to play the game.
+Conversely, you can make a game perform very efficiently by decreasing the complexity of the graphics.
 
 <p align="center">
   <img src="/assets/dlss/dusk.gif" />
@@ -65,9 +65,9 @@ Doom Eternal, released 27 years after the original DOOM, obviously has a similar
 
 ### Summarizing Graphics vs. Performance
 
-If a game prioritize graphics, but sacrifices too much performance, the game might look pretty but will likely be frustrating to play. If a game prioritizes performance, but sacrifices too much in graphics, the game will risk not being visually engaging enough for the player. In the worst case the game's immersiveness<sup><a href="https://www.merriam-webster.com/dictionary/immersive" target="_blank">3</a></sup> will also be lost.
+If a game prioritizes graphics, but sacrifices too much performance, the game might look pretty but will likely be frustrating to play. If a game prioritizes performance, but sacrifices too much in graphics, the game may not be visually engaging enough for the player. In the worst case the game's immersiveness<sup><a href="https://www.merriam-webster.com/dictionary/immersive" target="_blank">3</a></sup> may also be lost.
 
-For decades graphics and performance have been a trade-off where many delicate compromises have to be made to create a quality video game. What if video game developers could easily have both high performance and ultra-realistic graphics without requiring insane GPU power to do so? NVIDIA DLSS proposes an incredibly interesting solution.
+For decades graphics and performance has led to trade-offs where many delicate compromises were made to create a quality video game. What if video game developers could easily have both high performance *and* ultra-realistic graphics without requiring insane GPU power? NVIDIA DLSS proposes an incredibly interesting solution.
 
 ## What is NVIDIA DLSS?
 
@@ -79,34 +79,34 @@ For decades graphics and performance have been a trade-off where many delicate c
 </center>
 <br>
 
-**NVIDIA DLSS**, short for **deep learning super sampling**, is a way to use **machine learning** (letting a computer teach itself to improve at a task with minimal input from humans) to decrease the trade-off between looks and performance. Here's the complex step-by-step breakdown of how it works:
+**NVIDIA DLSS**, short for **deep learning super sampling**, is a way to use **machine learning** (letting a computer teach itself to improve at a task with minimal input from humans) to decrease the trade-off between graphics and performance. Here's the complex step-by-step breakdown of how it works:
 
 1. Several ultra-high resolution 16K images for a game are uploaded to an NVIDIA DGX supercomputer<sup><a href="https://www.nvidia.com/en-us/data-center/dgx-systems/" target="_blank">5</a></sup>. These images will later be used to compare and improve DLSS rendered images.
 2. The DGX supercomputer renders the game at a resolution much lower than the desired final resolution.
-3. An AI network called a convolutional autoencoder "takes the low resolution current frame, and the high resolution previous frame, to determine on a pixel-by-pixel basis how to generate a higher quality current frame."<sup><a href="" target="_blank">4</a></sup>
-4. **Motion vectors**, images that show the change between two frames, are rendered simultaneously. Motion vectors assist DLSS with render ing frames by helping it "guess" what the next frame is going to look like. For example, motion vectors could be used to recognize the direction the player is moving in-game. Then DLSS can use that information to help render the next frame since it now "knows" where the visible objects are about to be.
+3. An AI network called a **convolutional autoencoder** "takes the low resolution current frame, and the high resolution previous frame, to determine on a pixel-by-pixel basis how to generate a higher quality current frame."<sup><a href="" target="_blank">4</a></sup>
+4. **Motion vectors**, images that show the change between two frames, are rendered simultaneously. Motion vectors assist DLSS with rendering frames by helping it "guess" what the next frame is going to look like. For example, motion vectors could be used to recognize the direction the player is moving in-game. Then DLSS can use that information to help render the next frame since it now "knows" where the visible objects are about to be.
 5. The DGX supercomputer then compares the DLSS rendered image to the original image and sees how close it got, logging any errors and inconsistencies to improve future renders.
-6. Steps 2 through 5 are repeated tens of thousands of times until DLSS images are consistently close enough to the original image. At this point the **AI model** for the game is complete! An **AI model** is simply an algorithm that has been successfully trained to recognize patterns. In this case, the pattern involves what the game looks like (common color palettes and textures), various kinds of motion vectors that occur in normal gameplay and so much more!
-7. This AI model is then put into the NVIDIA RTX GPU **drivers**, software that tells hardware how to communicate with the rest of the computer. This means that when a user installs or updates to the newest drivers, their NVIDIA RTX GPUs can now use this model to render this game using DLSS!
+6. Steps 2 through 5 are repeated tens of thousands of times until DLSS images are consistently close enough to the original image. At this point the **AI model** for the game is complete. An **AI model** is simply an algorithm that has been successfully trained to recognize patterns. In this case, the pattern involves what the game looks like (common color palettes and textures), various kinds of motion vectors that occur in normal gameplay and much more.
+7. This AI model is then put into the NVIDIA RTX GPU **drivers**, software that tells hardware how to communicate with the rest of the computer. This means that when a user installs or updates to the newest drivers, their NVIDIA RTX GPUs can now use this model to render the game using DLSS!
 8. The user enables DLSS in their supported game of choice. The game will now display at a high resolution while the GPU is rendering the game at a lower resolution, offering *huge* resolution *and* performance gains!
 
-In short, a supercomputer teaches itself how to take low resolution images of a game and make them a much higher resolution. What it learns is then put into the end user's GPUs, which allows any NVIDIA RTX GPU to render the game at a low resolution but display the game at a high resolution. Better resolution *and* better performance have now been achieved simultaneously!
+In short, a supercomputer teaches itself how to take low resolution images of a game and **upscale** them into a much higher resolution. What it learns is then put into the end users' GPUs, which allows any NVIDIA RTX GPU to render the game at a low resolution but display the game at a high resolution. Better resolution *and* better performance have now been achieved simultaneously!
 
 ### Pros of DLSS
 
 ![Wolfenstein Youngblood 4K Performance Benchmarks](/assets/dlss/wolfenstein_dlss_performance.png)
 
 <center>
-  <em>Wolfenstein: Youngblood (2019) 4K benchmarks. Literally double the performance!<sup><a href="https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-2-0-a-big-leap-in-ai-rendering/" target="_blank">4</a></sup>
+  <em>Wolfenstein: Youngblood (2019) 4K benchmarks. Double the frame rate!!<sup><a href="https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-2-0-a-big-leap-in-ai-rendering/" target="_blank">4</a></sup>
   </em>
 </center>
 <br>
 
-The whole reason DLSS is so revolutionary is that it can offer substantial resolution and performance gains, especially for lower-end hardware. This kind of technology would be particularly exciting for consoles like the Xbox, PlayStation and Nintendo Switch. These consoles have to sacrifice a lot of performance and graphics capability to keep them cheap, so anything that can boost performance to the extent DLSS can is an exciting prospect! 
+The whole reason DLSS is so revolutionary is that it can offer substantial resolution and performance gains especially for lower-end hardware. This kind of technology would be particularly exciting for consoles like Xbox, PlayStation and Nintendo Switch. These consoles have to sacrifice a lot of performance and graphics capability due to their cost and form factor. Anything that can boost performance to the extent that DLSS can is an exciting prospect for console gaming! 
 
 ### Cons of DLSS
 
-Although DLSS is exciting and potentially revolutionary, it is an experimental project that currently only works on a small subset of PC games and only for modern NVIDIA RTX GPUs. This means that no consoles or AMD GPUs support DLSS at the time of writing.
+Although DLSS is exciting and potentially revolutionary, it is an experimental project that currently only works on a small subset of PC games. It is also only compatible with the recently released NVIDIA RTX GPUs. This means that no consoles or AMD GPUs support DLSS at the time of writing.
 
 The biggest issue of the current implementation of DLSS is that DLSS rendered images can have noticeable problems compared to simply rendering the image at native resolution.
 
@@ -118,11 +118,11 @@ The biggest issue of the current implementation of DLSS is that DLSS rendered im
 </center>
 <br>
 
-But DLSS is still *very close* to the natively rendered image, and it's running at *a minimum of 30 FPS higher*. That's why DLSS is so impressive to me. If we're already seeing substantial resolution and performance gains in its experimental phase imagine what it will be more capable of as the DLSS algorithms improve!
+But DLSS is still *very close* to the natively rendered image, and it's running at *a minimum of 30 FPS higher*. That's why DLSS is so impressive to me. If we're already seeing substantial resolution and performance gains in its experimental phase imagine what it will be capable of as DLSS improves!
 
 ## Closing Remarks
 
-DLSS is without a doubt the most exciting development in closing the gap between graphics and performance in the past decade. It's an ingenious way to "cheat" for high performance by rendering at a lower resolution and using AI models to upscale it live to a higher resolution. This gives gamers the best of both worlds: the performance of lower resolution and the appearance of higher resolution. I can't wait to see how DLSS improves in the coming years!
+DLSS is, without a doubt, the most exciting development in closing the gap between graphics and performance in the past decade. It's an ingenious way to "cheat" for high performance by rendering at a lower resolution and using AI models to upscale to a higher resolution. This gives gamers the best of both worlds: the performance of lower resolution and the appearance of higher resolution. I can't wait to see how DLSS improves in the coming years!
 
 ## Sources
 
