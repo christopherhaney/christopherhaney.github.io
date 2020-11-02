@@ -88,7 +88,7 @@ For decades graphics versus performance has led to trade-offs where many delicat
 5. The DGX supercomputer then compares the DLSS rendered image to the original image and sees how close it got, logging any errors and inconsistencies to improve future renders.
 6. Steps 2 through 5 are repeated tens of thousands of times until DLSS images are consistently close enough to the original image. At this point the AI model for the game is complete. An **AI model** is simply an algorithm that has been successfully trained to recognize patterns. In this case, the pattern involves what the game looks like (common color palettes and textures), various kinds of motion vectors that occur in normal gameplay and much more.
 7. This AI model is then put into the NVIDIA RTX GPU **drivers**, software that tells hardware how to communicate with the rest of the computer. This means that when a user installs or updates to the newest drivers, their NVIDIA RTX GPUs can now use this model to render the game using DLSS!
-8. The user enables DLSS in their supported game of choice. The game will now display at a high resolution while the GPU is rendering the game at a lower resolution, offering *huge* resolution *and* performance gains!
+8. The user enables DLSS in-game. The game will now display at a high resolution while the GPU is rendering the game at a lower resolution, offering *huge* resolution *and* performance gains!
 
 In short, a supercomputer teaches itself how to take low resolution images of a game and **upscale** them into a much higher resolution. What it learns is then put into the end users' GPUs, which allows any NVIDIA RTX GPU to render the game at a low resolution but display the game at a high resolution. Better resolution *and* better performance have now been achieved simultaneously!
 
@@ -108,21 +108,21 @@ The whole reason DLSS is so revolutionary is that it can offer substantial resol
 
 Although DLSS is exciting and potentially revolutionary, it is an experimental project that currently only works on a small subset of PC games. It is also only compatible with the recently released NVIDIA RTX GPUs. This means that no consoles or AMD GPUs support DLSS at the time of writing.
 
-The biggest issue of the current implementation of DLSS is that DLSS rendered images can have noticeable problems compared to simply rendering the image at native resolution.
+The biggest issue of the current implementation of DLSS is that DLSS rendered images can have noticeable problems compared to simply rendering at the desired resolution.
 
 ![Death Stranding Waterfall](/assets/dlss/death_stranding_waterfall.gif)
 
 <center>
-  <em>Death Stranding (2019) rendering at 4K resolution. Note the details lost in waterfall caused by DLSS.<sup><a href="https://youtu.be/5I-1kivNAtc?t=205" target="_blank">6</a></sup>
+  <em>Death Stranding (2019). Note the details lost in the distant waterfall and rocks caused by DLSS.<sup><a href="https://youtu.be/5I-1kivNAtc?t=205" target="_blank">6</a></sup>
   </em>
 </center>
 <br>
 
-But DLSS is still *very close* to the natively rendered image, and it's running at *a minimum of 30 FPS higher*. That's why DLSS is so impressive to me. If we're already seeing substantial resolution and performance gains in its experimental phase imagine what it will be capable of as DLSS improves!
+Regardless, DLSS is *very close* to the original 4K quality, and it's running at *a minimum of 30 FPS higher*. That's why DLSS is so impressive to me. We're already seeing substantial resolution and performance gains in its experimental phase. Imagine what DLSS will be capable of as it improves!
 
 ## Closing Remarks
 
-DLSS is, without a doubt, the most exciting development in closing the gap between graphics and performance in the past decade. It's an ingenious way to "cheat" for high performance by rendering at a lower resolution and using AI models to upscale to a higher resolution. This gives gamers the best of both worlds: the performance of lower resolution and the appearance of higher resolution. I can't wait to see how DLSS improves in the coming years!
+DLSS is, without a doubt, the most exciting development in closing the gap between graphics and performance in the past decade. It's an ingenious way to "cheat" for high performance by rendering at a lower resolution and using AI models to upscale to a higher resolution. This gives gamers the best of both worlds: the performance of low resolution and the appearance of high resolution. I can't wait to see how DLSS improves in the coming years!
 
 ## Sources
 
